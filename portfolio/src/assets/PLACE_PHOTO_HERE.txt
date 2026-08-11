@@ -1,0 +1,11 @@
+Add your photo here as "profile.jpg" (or any name), then in
+src/data/portfolio.js:
+
+1. Add near the top of the file:
+   import profilePhoto from '../assets/profile.jpg'
+
+2. Set:
+   photo: profilePhoto,
+
+Until then, the Hero section shows a camera icon placeholder
+you can click to remind yourself to swap it in.

@@ -1,0 +1,4 @@
+Put your actual resume PDF in this "public" folder and name it "resume.pdf".
+The Hero and Resume sections link to it via /resume.pdf.
+
+You can delete this text file once you've added your resume.pdf.

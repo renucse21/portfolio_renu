@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-paper-50 text-ink-900 font-body transition-colors duration-300;
+}
+
+html.dark body {
+  @apply bg-ink-900 text-paper-100;
+}
+
+::selection {
+  @apply bg-mint-400/30 text-inherit;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-mint-500/40 rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-mint-500/60;
+}
+
+@layer components {
+  .section-shell {
+    @apply relative mx-auto w-full max-w-6xl px-6 py-24 sm:px-8 lg:px-10;
+  }
+
+  .glass-card {
+    @apply relative rounded-2xl border border-ink-600/40 bg-ink-800/60 backdrop-blur-xl shadow-glass;
+  }
+
+  .glass-card-light {
+    @apply relative rounded-2xl border border-ink-900/10 bg-white/70 backdrop-blur-xl shadow-glass;
+  }
+
+  .tag-pill {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-mint-500/30 bg-mint-500/10 px-3 py-1 font-mono text-xs text-mint-300;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-mint-400 to-mint-500 px-6 py-3 font-display text-sm font-semibold text-ink-950 shadow-glow-mint transition-transform duration-200 hover:scale-[1.03] active:scale-[0.98];
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-mint-400/40 px-6 py-3 font-display text-sm font-semibold text-mint-300 transition-colors duration-200 hover:bg-mint-400/10;
+  }
+
+  .jsx-tag {
+    @apply font-mono text-sm tracking-tight text-mint-400;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
